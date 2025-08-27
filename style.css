@@ -556,6 +556,7 @@ margin-left: -65%;
   background-color: #1a1a1a;
   color: white;
   padding: 50px 5%;
+  width: auto;
 }
 
 .footer-newsletter {
@@ -664,106 +665,113 @@ margin-left: -65%;
   margin-left: 10px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+  .starting-page {
+    height: auto;
+    padding: 40px 0;
+  }
   .starting-content {
     flex-direction: column;
     text-align: center;
-    align-content: center;
+    align-items: center;
   }
-  
   .starting-content .text-content {
     padding-right: 0;
     margin-bottom: 30px;
   }
-}
-
-@media (max-width: 992px) {
-  .navbar-nav {
-    gap: 10px;
-  }
-  
-  .Tees-LLC {
-    font-size: 1.2rem;
-  }
-  
-  .Tees-LLC span {
-    font-size: 1.2rem;
-  }
-
-  .demand-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .info-list {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-  
-  .element-img-2, .element-img-4, .element-img-6 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    transform: rotate(90deg);
-  }
-
-  .banner-with-image {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  .banner-image-container img {
-    top: 0;
+  .image-content {
     margin-top: 20px;
-  }
-  
-  .testimonials-container {
-    justify-content: center;
-  }
-
-  .contact-section .form-row {
-    flex-direction: column;
-  }
-  
-  .footer-newsletter {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .newsletter-form {
+    width: 100%; /* Ensure the container takes full width */
+    display: flex; /* Use flexbox for better alignment on small screens */
     flex-direction: column;
     align-items: center;
   }
-  
-  .footer-links-container {
-    flex-direction: column;
-    gap: 20px;
+  /* Resetting the image margins for better stacking on mobile */
+  .custom-shirt, .custom-shirts, .shape {
+    position: static;
+    width: 80%;
+    max-width: none;
+    margin: 10px auto; /* Add some vertical space between images */
   }
+  .second-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .first-para {
+    font-size: 1rem;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
 
-  .footer-logo, .footer-column {
-    flex-basis: auto;
-    width: 100%;
-    text-align: center;
+@media (max-width: 768px) {
+  .feature-card, .testimonial-card {
+    width: 100%; /* On mobile, cards should take full width */
+    max-width: 300px; /* An optional max-width to prevent stretching on tablets */
   }
-  
-  .footer-bottom {
+}
+
+@media (max-width: 480px) {
+  .feature-card, .testimonial-card {
+    width: 90%; /* On very small screens, give a little margin on the sides */
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .system {
+    text-align: center;
+    padding: 30px 5%;
+  }
+  .fifth-heading {
+    margin-bottom: 30px;
+  }
+  .element-img2, .element-img-4, .element-img-6 {
+    display: none; /* Hide connecting lines on smaller screens */
+  }
+  /* Use a flexbox container to arrange the steps vertically */
+  .system > div {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .element-img-1, .element-img-3, .element-img-5 {
+    position: static; /* Remove absolute positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
     text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .second-heading, .third-heading {
-    font-size: 2rem;
+  .contact-section .form-row {
+    flex-direction: column; /* Stack form inputs vertically */
+    gap: 10px;
   }
-  
-  .section-title, .contact-subheading, .testimonial-heading {
-    font-size: 1.8rem;
+  .newsletter-form {
+    flex-direction: column; /* Stack newsletter form inputs */
+    gap: 10px;
+    width: 100%;
   }
-
-  .feature-cards, .testimonials-container, .brands-section {
+  .newsletter-form input {
+    min-width: unset;
+    width: 100%;
+  }
+  .footer-links-container {
+    flex-direction: column; /* Stack footer columns vertically */
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .footer-bottom {
+    flex-direction: column; /* Stack copyright and payment icons */
+    text-align: center;
     gap: 15px;
   }
 }
