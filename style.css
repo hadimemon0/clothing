@@ -19,22 +19,17 @@ body {
 
 .navbar {
   background-color: white;
-  padding: 10px 5%;
+  padding: 10px 0%;
 }
 
 .Tees-LLC {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-left: 0px;
-}
-
-.Tees-LLC span {
-  font-weight: 400;
-  text-transform: capitalize;
+  margin-left: 15px;
 }
 
 .navbar-nav {
-  gap: 20px;
+  gap: 10px;
 }
 
 .navbar .fas, .navbar .fa-solid {
