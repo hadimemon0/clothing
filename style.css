@@ -32,6 +32,10 @@ body {
   gap: 10px;
 }
 
+.nav-item{
+  margin-left:20px;
+}
+
 .navbar .fas, .navbar .fa-solid {
   margin-left: 15px;
   font-size: 1.2rem;
